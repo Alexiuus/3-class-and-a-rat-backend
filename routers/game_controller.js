@@ -6,8 +6,8 @@ const routerGame = express.Router();
 routerGame.post('/createGame', (req, res) => {
   const id_game = gameServices.id_game(req.body.username);
   try {
-    const webSocket = webSocketManager.createWebSocket(id_game);
-    res.json({ link: `localhost:${webSocket.options.port}/${id_game}` });
+    const webSocket = webSocketManager.createWebSocket(id_game, req.body.username);
+    res.json({ link: `http://localhost:3000/${id_game}` });
   } catch {
     console.log('Error');
   }

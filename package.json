@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Alexiuus/3-class-and-a-rat-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "express-ws": "^5.0.2",
     "socket.io": "^4.6.1",
     "ws": "^8.12.1"
   },
